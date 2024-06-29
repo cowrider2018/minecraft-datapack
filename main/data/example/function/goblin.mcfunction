@@ -22,7 +22,7 @@ execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run scoreb
 execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run scoreboard players operation @s motion_y += @s pos_y
 execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run scoreboard players operation @s motion_z += @s pos_z
 
-execute at @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run summon minecraft:zombie ~ ~ ~ {IsBaby:true,Tags:["goblin"],Attributes:[{id:generic.follow_range,base:0}],CustomNameVisible:1,CustomName:'[{"text":"哥布林","italic":false}]',Team:goblin,DeathLootTable:"empty"}
+execute at @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run summon minecraft:zombie ~ ~ ~ {IsBaby:true,Tags:["goblin"],Attributes:[{id:generic.attack_damage,base:0}],CustomNameVisible:1,CustomName:'[{"text":"哥布林","italic":false}]',Team:goblin,DeathLootTable:"empty"}
 
 execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=zombie,tag=goblin,limit=1,sort=nearest] Pos[0] double 0.0001 run scoreboard players get @s motion_x
 execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=zombie,tag=goblin,limit=1,sort=nearest] Pos[1] double 0.0001 run scoreboard players get @s motion_y
