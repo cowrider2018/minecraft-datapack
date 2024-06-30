@@ -22,11 +22,13 @@ execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run scoreb
 execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run scoreboard players operation @s motion_y += @s pos_y
 execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run scoreboard players operation @s motion_z += @s pos_z
 
-execute at @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run summon minecraft:zombie ~ ~ ~ {IsBaby:true,Tags:["goblin"],Attributes:[{id:generic.attack_damage,base:0}],CustomNameVisible:1,CustomName:'[{"text":"哥布林","italic":false}]',Team:goblin,DeathLootTable:"empty"}
+execute at @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] run summon minecraft:piglin ~ ~-2 ~ {IsBaby:false,Tags:["goblin"],attributes:[{id:"minecraft:generic.scale",base:0.6}],DeathLootTable:"empty",Team:"goblin",ArmorItems:[{},{Count:1b,id:"leather_leggings"},{},{}],Brain:{memories:{"minecraft:admiring_disabled":{value:1,ttl:200}}}}
 
-execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=zombie,tag=goblin,limit=1,sort=nearest] Pos[0] double 0.0001 run scoreboard players get @s motion_x
-execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=zombie,tag=goblin,limit=1,sort=nearest] Pos[1] double 0.0001 run scoreboard players get @s motion_y
-execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=zombie,tag=goblin,limit=1,sort=nearest] Pos[2] double 0.0001 run scoreboard players get @s motion_z
+execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=piglin,tag=goblin,limit=1,sort=nearest] Pos[0] double 0.0001 run scoreboard players get @s motion_x
+execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=piglin,tag=goblin,limit=1,sort=nearest] Pos[1] double 0.0001 run scoreboard players get @s motion_y
+execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] store result entity @e[type=piglin,tag=goblin,limit=1,sort=nearest] Pos[2] double 0.0001 run scoreboard players get @s motion_z
+
+execute as @e[type=minecraft:arrow,distance=..5,nbt=!{inGround:true}] at @e[type=piglin,tag=goblin,limit=1,sort=nearest] run particle block{block_state:{Name:dirt}} ~ ~-1 ~ 0.2 0.75 0.2 1 100 normal @a
 
 tag @e[type=arrow] remove goblin
 scoreboard players set @s goblin_life 0
