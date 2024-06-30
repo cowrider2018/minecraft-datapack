@@ -14,7 +14,7 @@
 		{
 			"effect": {
 				"type":"minecraft:damage_item",
-				"amount":383
+				"amount":382
 			}
         },
 		{
