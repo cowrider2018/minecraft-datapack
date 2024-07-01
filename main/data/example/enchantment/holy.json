@@ -24,17 +24,17 @@
 				}
             }
         ],
-		"minecraft:attributes": [
-			{
-				"amount": {
-					"type": "minecraft:linear",
-					"base": -0.999,
-					"per_level_above_first": 0
-				},
-				"attribute": "minecraft:generic.attack_damage",
-				"id": "example:enchantment.vampire",
-				"operation": "add_multiplied_total"
+		"minecraft:damage": [
+		  {
+			"effect": {
+			  "type": "minecraft:add",
+			  "value": {
+				"type": "minecraft:linear",
+				"base": -100,
+				"per_level_above_first": 0
+			  }
 			}
+		  }
 		]
     },
     "max_cost": {

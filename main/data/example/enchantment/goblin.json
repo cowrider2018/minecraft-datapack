@@ -31,6 +31,6 @@
   "slots": [
     "head"
   ],
-  "supported_items": "#minecraft:enchantable/hat",
+  "supported_items": "#minecraft:enchantable/head_armor",
   "weight": 5
 }
