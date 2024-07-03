@@ -27,5 +27,5 @@
   ],
   "supported_items": "#minecraft:enchantable/mining",
   "primary_items": "#minecraft:enchantable/mining",
-  "weight": 500
+  "weight": 5
 }
