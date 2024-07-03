@@ -1,0 +1,12 @@
+{
+    "values":[
+        "example:vampire",
+        "example:giant",
+        "example:holy",
+        "example:volley",
+		"example:roar",
+		"example:foison",
+		"example:goblin",
+		"cut_down_trees:cut_down"
+    ]
+}
